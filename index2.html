@@ -1,0 +1,28 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Record Plugin</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/wavesurfer.js"></script>
+    <script src="https://unpkg.com/wavesurfer.js/dist/plugin/wavesurfer.record.min.js"></script>
+    <script src="record.js" defer></script>
+</head>
+<body class="bg-gray-100">
+    <h1 class="mt-0 text-2xl">Press Record to start recording 🎙️</h1>
+    <p class="mb-4">📖 <a href="https://wavesurfer.xyz/docs/classes/plugins_record.RecordPlugin" class="text-blue-500">Record plugin docs</a></p>
+    <button id="record" class="m-1 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Record</button>
+    <button id="pause" class="m-1 hidden bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Pause</button>
+    <select id="mic-select" class="m-1 border border-gray-300 rounded py-2 px-4">
+        <option value="" hidden>Select mic</option>
+    </select>
+    <label style="display:inline-block;" class="m-1">
+        <input type="checkbox" class="form-checkbox" /> Scrolling waveform
+    </label>
+    <p id="progress" class="m-1">00:00</p>
+    <div id="mic" class="border border-gray-300 rounded p-1 m-1"></div>
+    <div id="recordings" class="m-1"></div>
+</body>
+</html>
